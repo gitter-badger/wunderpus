@@ -1,0 +1,108 @@
+
+/* Reset */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1.5;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+/* Grid-system */
+.grid {
+	max-width: 1200px;
+	margin: 0 auto 1.6%;
+	box-sizing: border-box;
+}
+
+.row, [class*='col-'] {
+	box-sizing: border-box;
+	/*background-color: rgba( 0, 0, 0, 0.2 ); /* TODO: remove. */*/
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row:after {
+	clear: both;
+}
+
+/* All classes containing 'col-'. */
+[class*='col-'] {
+	position: relative;
+	float: left;
+	display: block;
+	margin-top: 1.6%;
+	background-color: #ff9500;
+}
+
+/* Only it column has a sibling to the left. */
+[class*='col-'] + [class*='col-'] {
+	margin-left: 1.6%;
+}
+
+/* Column within a column. */
+[class*='col-'] [class*='col-'] {
+	margin-top: 0;
+}
+
+.col-1 { width: 6.86666666667%; }
+.col-2 { width: 15.3333333333%; }
+.col-3 { width: 23.8%; }
+.col-4 { width: 32.2666666667%; }
+.col-5 { width: 40.7333333333%; }
+.col-6 { width: 49.2%; }
+.col-7 { width: 57.6666666667%; }
+.col-8 { width: 66.1333333333%; }
+.col-9 { width: 74.6%; }
+.col-10 { width: 83.0666666667%; }
+.col-11 { width: 91.5333333333%; }
+.col-12 { 
+	width: 100%; 
+	margin-left: 0;
+}
+
+@media only screen and (max-width: 786px) {
+	[class*='col-'] {
+		float: none;
+		width: auto;
+	}
+
+	[class*='col-'] + [class*='col-'] {
+		margin-left: 0;
+	}
+}
